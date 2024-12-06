@@ -265,10 +265,10 @@ def main():
         # Get stuff
         mydivs = soup.findAll("div", { "class" : "gs_or" })
         for div in mydivs:
-            try:
-                links.append(div.find('h3').find('a').get('href'))
-            except: # catch *all* exceptions
-                links.append('Look manually at: '+url)
+            # try:
+            #     links.append(div.find('h3').find('a').get('href'))
+            # except: # catch *all* exceptions
+            #     links.append('Look manually at: '+url)
 
             try:
                 # Extract links from the gs_or_ggs class
