@@ -272,7 +272,7 @@ def main():
 
             try:
                 # Extract links from the gs_or_ggs class
-                link_element = div.find("div", {"class": "gs_or_ggs"}).find("a")
+                link_element = div.find("div", {"class": "gs_or_ggsm"}).find("a")
                 if link_element:
                     links.append(link_element.get('href'))
                 else:
@@ -283,7 +283,7 @@ def main():
                 print(f"Error extracting link: {e}")
 
             try:
-                links.append(get_year(div.find('div',{'class' : 'gs_or_ggs'}).text))
+                links.append(get_year(div.find('div',{'class' : 'gs_or_ggsm'}).text))
             except:
                 warnings.warn("Link not available for {}, appending 0".format(title[-1]))
                 links.append(0)
